@@ -3,7 +3,7 @@ var ContactManagerApp;
 (function (ContactManagerApp) {
     var MainController = (function () {
         function MainController() {
-            this.message = "Hello from dklfj controller";
+            this.message = "Hello from Main controller";
         }
         MainController.prototype.contructor = function () {
         };

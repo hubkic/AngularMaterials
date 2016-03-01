@@ -6,6 +6,6 @@ module ContactManagerApp{
         
         contructor(){
         }
-        message: string ="Hello from dklfj controller";
+        message: string ="Hello from Main controller";
     }
 }
