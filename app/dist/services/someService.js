@@ -14,7 +14,7 @@ var ContactManagerApp;
             });
         };
         return MyService;
-    }());
+    })();
     ContactManagerApp.MyService = MyService;
 })(ContactManagerApp || (ContactManagerApp = {}));
 //# sourceMappingURL=someService.js.map

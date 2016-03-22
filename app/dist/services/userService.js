@@ -22,7 +22,7 @@ var ContactManagerApp;
                     notes: []
                 },
                 {
-                    name: 'Sandy Armstrong',
+                    name: 'Sandy Armstrong 2222222',
                     avatar: 'svg-3',
                     bio: 'Make beginning midst life abundantly from in after light. Without may kind there, seasons lights signs, give made moved. Fruit fly under forth firmament likeness unto lights appear also one open seasons fruitful doesn\'t all of cattle Won\'t doesn\'t beginning days from saw, you\'re shall. Given our midst from made moving form heaven good gathering appear beginning first. Sea the.',
                     notes: []
@@ -40,7 +40,7 @@ var ContactManagerApp;
         };
         UserService.$inject = ['$q'];
         return UserService;
-    }());
+    })();
     ContactManagerApp.UserService = UserService;
 })(ContactManagerApp || (ContactManagerApp = {}));
 //# sourceMappingURL=userService.js.map
