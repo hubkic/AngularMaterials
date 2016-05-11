@@ -14,6 +14,7 @@ var ContactManagerApp;
             this.tabIndex = 0;
             this.searchText = '';
             this.users = [];
+            this.names = [];
             this.selected = null;
             this.newNote = new ContactManagerApp.Note('', null);
             var self = this;
@@ -24,6 +25,12 @@ var ContactManagerApp;
                 self.selected = users[0];
                 self.userService.selectedUser = _this.selected;
                 console.log(self.users);
+            });
+            this.someService
+                .getSomething()
+                .then(function (names) {
+                self.names = names;
+                console.log(self.names);
             });
         }
         MainController.prototype.addNote = function () {

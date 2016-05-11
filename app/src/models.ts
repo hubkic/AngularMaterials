@@ -33,4 +33,19 @@ module ContactManagerApp {
       public date: Date) {      
     }
   }  
+  
+  export class City{
+      constructor(
+          public name: string
+      ){          
+    }
+  }
+  
+  export class Name{
+      constructor(
+          public city: City,
+          public firstName: string,
+          public lastName: string
+      ) {}
+  }
 }

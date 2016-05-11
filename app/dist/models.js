@@ -32,5 +32,21 @@ var ContactManagerApp;
         return Note;
     })();
     ContactManagerApp.Note = Note;
+    var City = (function () {
+        function City(name) {
+            this.name = name;
+        }
+        return City;
+    })();
+    ContactManagerApp.City = City;
+    var Name = (function () {
+        function Name(city, firstName, lastName) {
+            this.city = city;
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        return Name;
+    })();
+    ContactManagerApp.Name = Name;
 })(ContactManagerApp || (ContactManagerApp = {}));
 //# sourceMappingURL=models.js.map

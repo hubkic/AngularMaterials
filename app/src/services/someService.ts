@@ -2,25 +2,17 @@
 
 module ContactManagerApp {
     export interface IMyService {
-        GetAll(successCallback: Function);
+        getSomething(): ng.IPromise<Name[]>;
     }
  
     export class MyService {
- 
-        http: ng.IHttpService;
-        location: ng.ILocationService;
- 
-        constructor($http: ng.IHttpService, $location: ng.ILocationService) {
-            this.http = $http;
-            this.location = $location;
+        
+        constructor(private $http: ng.IHttpService) {
         }
-  
-        GetAll(successCallback: Function) {
-            this.http.get(this.location.absUrl()).success((data, status) => {
-                successCallback(data);
-            }).error(error => {
-                successCallback(error);
-            });
+
+        getSomething(): ng.IPromise<Name[]> {          
+            return this.$http.get('http://localhost:8080/api/na mes')
+                    .then(response => response.data);
         }
     }
 }

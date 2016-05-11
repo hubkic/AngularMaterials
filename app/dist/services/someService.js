@@ -2,16 +2,12 @@
 var ContactManagerApp;
 (function (ContactManagerApp) {
     var MyService = (function () {
-        function MyService($http, $location) {
-            this.http = $http;
-            this.location = $location;
+        function MyService($http) {
+            this.$http = $http;
         }
-        MyService.prototype.GetAll = function (successCallback) {
-            this.http.get(this.location.absUrl()).success(function (data, status) {
-                successCallback(data);
-            }).error(function (error) {
-                successCallback(error);
-            });
+        MyService.prototype.getSomething = function () {
+            return this.$http.get('http://localhost:8080/api/names')
+                .then(function (response) { return response.data; });
         };
         return MyService;
     })();

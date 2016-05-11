@@ -30,11 +30,18 @@ module ContactManagerApp{
                 console.log(self.users);
             });    
             
+            this.someService
+            .getSomething()
+            .then((names: Name[]) =>{
+               self.names = names; 
+               console.log(self.names);
+            });
         }
         
         tabIndex: number = 0;
         searchText: string = '';
         users: User[] = [];
+        names: Name[] = [];
         selected: User = null;
         
             
